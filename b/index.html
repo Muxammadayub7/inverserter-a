@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>b</title>
+  <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="./css/main.css" />
+  </noscript>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero__container">
+      <div class="boxes">
+        <div class="box">
+          <img src="./images/hero/Calendar.svg" width="25" height="25" decoding="async" loading="lazy" alt="calendar">
+          <p class="box__text">8–9-апрель</p>
+        </div>
+        <div class="box">
+          <img src="./images/hero/Clock.svg" width="25" height="25" decoding="async" loading="lazy" alt="clock">
+          <p class="box__text">20:00</p>
+        </div>
+      </div>
+      <h2 class="hero__title"><span>ОЙЛИК КУТИБ</span> <br> ЯШАШНИ ТЎХТАТАСИЗ</h2>
+      <p class="hero__subtitle">Интенсив дарсда сизни кутаман</p>
+      <div class="hero__logo-container">
+        <img src="./images/hero/logo.avif" fetchpriority="high" width="261" height="281" decoding="async" alt="logo"
+          class="logo">
+        <button class="btn" id="open">Каналга қўшилиш</button>
+      </div>
+      <div class="timer-container">
+        <p class="timer" id="timer">02:00</p>
+      </div>
+      <div class="bottom__inner">
+        <h2 class="bottom__title">Сиз ўрганасиз:</h2>
+        <div class="bottom__row">
+          <img src="./images/hero/sticky.svg" width="37" height="37" loading="lazy" decoding="async" alt="sticky">
+          <p class="bottom__row__text"><span><b>Асосий иш билан бир вақтда</b> </span> <br> инвестиция бошлаш</p>
+        </div>
+        <div class="bottom__row">
+          <img src="./images/hero/sticky.svg" width="37" height="37" loading="lazy" decoding="async" alt="sticky">
+          <p class="bottom__row__text">2026 йилда <span><b>пассив даромад <br> берувчи</span></b> қўлланма</p>
+        </div>
+        <div class="bottom__row">
+          <img src="./images/hero/sticky.svg" width="37" height="37" loading="lazy" decoding="async" alt="sticky">
+          <p class="bottom__row__text">Айни вақтда ўсиши юқори <br> бўлган ва мен тавсия қиладиган <br>
+          <b> <span>5–10$ акциялар ҳақида</span></b>
+          </p>
+        </div>
+        <button class="hero__btn" id="open">Каналга қўшилиш</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="registrationModal" class="homeModal" style="display: none">
+    <div class="homeModalOverlay"></div>
+    <div class="homeFormContainer">
+      <button class="closeButton" id="closeModalBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none">
+          <path d="M1 11L11 1M1 1.00001L11 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="homeFormTop">
+        <h1 class="homeFormTopTitle">
+          Ro'yxatdan o'tish uchun <br> ma'lumotlaringizni kiriting!
+        </h1>
+      </div>
+      <form id="registrationForm" name="contact-form">
+        <div class="HomeFormRow">
+          <label class="HomeFormRowLabel" for="name">Ismingiz:</label>
+          <input class="HomeFormRowInput" type="text" id="name" name="name" placeholder="Ismingizni kiriting"
+            autocomplete="name" />
+          <p class="homeFormErrorText" id="nameError" style="display: none">❌ Ismingizni kiriting!</p>
+        </div>
+
+        <div class="HomeFormRow">
+          <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz:</label>
+          <div class="phone-input-container">
+            <button type="button" class="selected-country" id="selectedCountry">
+              <div id="selectedCountryFlag" style="display: flex; align-items: center;"></div>
+              <span class="selected-code" id="selectedCountryCodeText">+998</span>
+            </button>
+            <div class="country-dropdown" id="countryDropdown" style="display:none"></div>
+            <div class="phone-field" style="flex: 1;">
+              <input class="HomeFormRowInput phone-input" type="tel" id="phone" name="phone" inputmode="numeric"
+                placeholder="88 888 88 88" autocomplete="tel"
+                style="border: none; background-color: transparent; padding-left: 5px; width: 100%;" />
+            </div>
+          </div>
+          <p class="homeFormErrorText" id="phoneError" style="display:none">❌ Telefon raqam mos emas!</p>
+        </div>
+
+        <button type="submit" class="HomeFormBtn" id="submitBtn">DAVOM ETISH</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script defer src="./js/phoneFormatter.js"></script>
+  <script defer src="./js/app.js"></script>
+
+</body>
+
+</html>
